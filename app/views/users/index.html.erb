@@ -1,0 +1,17 @@
+Index
+
+<% @users.each do |user| %>
+	<%= user.name %>
+	Avatar <br>
+	original size
+	<%= image_tag(user.avatar)%>
+
+	large size
+	<%= image_tag(user.avatar.large_avatar)%>
+
+	medium size
+	<%= image_tag(user.avatar.medium_avatar)%>
+
+	small size
+	<%= image_tag(user.avatar.small_avatar)%>
+<% end %>

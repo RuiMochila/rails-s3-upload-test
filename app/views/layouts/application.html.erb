@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S3UploadTest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% flash.each do |key, value| %>
+	<!-- success warning error -->
+	<div class="user_message <%= key %>"> 
+		<% if key == "error" %>
+			<% icon = "times" %>
+		<% elsif key == "warning" %>
+			<% icon = "exclamation" %>
+		<% else %>
+			<% icon = "check" %>
+		<% end %>
+		<i class="fa fa-<%= icon %>"></i> <%= value %>
+	</div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

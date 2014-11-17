@@ -1,0 +1,9 @@
+New
+
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+    Name
+    <%= f.text_field :name %>
+    My Avatar
+    <%= f.file_field :avatar %>
+    <%= f.submit %>
+<% end %>
