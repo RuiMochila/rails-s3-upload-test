@@ -5,21 +5,33 @@ Create Users with avatar field as string
 rake db:migrate 
 
 Create a file on the project root directory named .env and set your keys like so:
+
 S3_KEY=00000000000000000000
+
 Or set them as environment variables on your machine.
 
 Key points:
 
 User model -> mount_uploader :avatar, AvatarUploader
+
 avatar_uploader.rb
+
 initializers/s3.rb
 
 Gems
+
 # for aws cloud storage
+
 gem 'fog'
+
 # photo resizing
+
 gem 'mini_magick'
+
 # file upload solution
+
 gem 'carrierwave'
+
 #my environment variables on the root directory
+
 gem 'dotenv-rails'
